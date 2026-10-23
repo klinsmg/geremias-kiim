@@ -2,7 +2,7 @@
 layout: ../layouts/Legal.astro
 title: Termos de Uso
 description: Condições de utilização do site de Geremias Kiim (GKiim Hair), em Lisboa.
-versao: "1.1"
+versao: "1.2"
 data: 23 de outubro de 2026
 ---
 
@@ -10,10 +10,9 @@ data: 23 de outubro de 2026
 
 Este site é propriedade intelectual de **Brendhon Klinsmann Sampaio Lopes**, que o desenvolveu e o mantém no ar (contacto: [contato@klinsmannof.com](mailto:contato@klinsmannof.com)). Os conteúdos que o site apresenta (fotografias, vídeo, textos, nome e marca) são de **Geremias Kiim**, que presta serviços de cabeleireiro e coloração sob a marca GKiim Hair, no Solo Concept Beauty Coworking, em Santos, Lisboa, Portugal. A titularidade de cada parte está na secção 5.
 
-O responsável pelo tratamento de dados pessoais, para efeitos da [Política de Privacidade](/privacidade), é o titular dos serviços de cabeleireiro: **[NOME LEGAL DO TITULAR]**, NIF **[NIF]**.
+Este site é um **projeto de portfólio** de Brendhon Klinsmann Sampaio Lopes. Não é um serviço comercial em operação: não vende nada online e não recolhe pagamentos. Os dados do titular e dos serviços serão completados quando o site passar a uso comercial.
 
-- Morada profissional: [MORADA COMPLETA]
-- E-mail: [E-MAIL]
+- E-mail do site: contato@klinsmannof.com
 - Telefone e WhatsApp: +351 937 751 253
 
 ## 2. Para que serve este site
@@ -63,9 +62,9 @@ O tratamento dos seus dados está descrito na [Política de Privacidade](/privac
 
 ## 10. Reclamações e resolução de litígios
 
-Pode apresentar reclamação no Livro de Reclamações Eletrónico, em [www.livroreclamacoes.pt](https://www.livroreclamacoes.pt). O livro em papel está disponível no local de atendimento. [CONFIRMAR: situação do livro de reclamações no Solo Concept]
+Pode apresentar reclamação no Livro de Reclamações Eletrónico, em [www.livroreclamacoes.pt](https://www.livroreclamacoes.pt). O livro em papel está disponível no local de atendimento.
 
-Em caso de litígio de consumo, pode recorrer a uma entidade de resolução alternativa de litígios, como o Centro de Arbitragem de Conflitos de Consumo de Lisboa, em [www.centroarbitragemlisboa.pt](https://www.centroarbitragemlisboa.pt). A lista completa das entidades está em [www.consumidor.gov.pt](https://www.consumidor.gov.pt). [CONFIRMAR: entidade competente]
+Em caso de litígio de consumo, pode recorrer a uma entidade de resolução alternativa de litígios, como o Centro de Arbitragem de Conflitos de Consumo de Lisboa, em [www.centroarbitragemlisboa.pt](https://www.centroarbitragemlisboa.pt). A lista completa das entidades está em [www.consumidor.gov.pt](https://www.consumidor.gov.pt).
 
 ## 11. Lei aplicável e tribunal competente
 
@@ -77,5 +76,6 @@ Podemos atualizar estes termos. A versão em vigor é sempre a publicada nesta p
 
 ## 13. Histórico de versões
 
+- Versão 1.2, 23 de outubro de 2026: site identificado como projeto de portfólio; campos por completar removidos.
 - Versão 1.1, 23 de outubro de 2026: titularidade do site e dos conteúdos; desativação do site.
 - Versão 1.0, 13 de outubro de 2026: primeira publicação.

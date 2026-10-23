@@ -42,4 +42,4 @@ Se o site passar a usar cookies, por exemplo uma ferramenta de análise que os g
 
 ## 8. Lei aplicável e contacto
 
-Esta política segue o Regulamento Geral sobre a Proteção de Dados e a Lei n.º 41/2004, sobre privacidade nas comunicações eletrónicas. Para qualquer dúvida, escreva para [E-MAIL] ou envie mensagem para o +351 937 751 253.
+Esta política segue o Regulamento Geral sobre a Proteção de Dados e a Lei n.º 41/2004, sobre privacidade nas comunicações eletrónicas. Para qualquer dúvida, escreva para contato@klinsmannof.com ou envie mensagem para o +351 937 751 253.

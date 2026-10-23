@@ -17,10 +17,9 @@ data: 23 de outubro de 2026
 
 ## 1. Quem é responsável pelos seus dados
 
-O responsável pelo tratamento é **[NOME LEGAL DO TITULAR]**, NIF **[NIF]**, que exerce a atividade sob a marca GKiim Hair e atende no Solo Concept Beauty Coworking, em Santos, Lisboa, Portugal.
+Este site é um **projeto de portfólio**. O contacto para qualquer assunto sobre dados é o titular do site, Brendhon Klinsmann Sampaio Lopes. Os serviços apresentados são prestados por Geremias Kiim, sob a marca GKiim Hair, no Solo Concept Beauty Coworking, em Santos, Lisboa, Portugal.
 
-- Morada profissional: [MORADA COMPLETA]
-- E-mail para assuntos de privacidade: [E-MAIL]
+- E-mail para assuntos de privacidade: contato@klinsmannof.com
 - Telefone e WhatsApp: +351 937 751 253
 
 Não temos Encarregado de Proteção de Dados, porque a lei não o exige para uma atividade desta dimensão. Os contactos acima servem para qualquer pedido sobre os seus dados.
@@ -41,12 +40,12 @@ Pedimos que não nos envie dados de saúde além do estritamente necessário par
 
 | Finalidade | Dados | Fundamento (RGPD) | Prazo |
 | --- | --- | --- | --- |
-| Responder ao seu contacto e preparar o orçamento | Telefone, nome, mensagens, fotografias enviadas | Diligências pré-contratuais a seu pedido, art. 6.º, n.º 1, al. b) | [CONFIRMAR: por exemplo, 12 meses após o último contacto] |
-| Marcar e prestar o serviço | Telefone, nome, mensagens | Execução do contrato, art. 6.º, n.º 1, al. b) | Enquanto durar a relação de cliente e [CONFIRMAR: prazo] depois |
+| Responder ao seu contacto e preparar o orçamento | Telefone, nome, mensagens, fotografias enviadas | Diligências pré-contratuais a seu pedido, art. 6.º, n.º 1, al. b) | Pelo tempo necessário para responder ao pedido |
+| Marcar e prestar o serviço | Telefone, nome, mensagens | Execução do contrato, art. 6.º, n.º 1, al. b) | Enquanto durar a relação de cliente |
 | Faturação e obrigações fiscais | Nome, NIF e dados da fatura, quando emitida | Obrigação legal, art. 6.º, n.º 1, al. c) | 10 anos, prazo de conservação fiscal em Portugal |
-| Entregar o site e mantê-lo seguro | Endereço IP e dados técnicos de acesso | Interesse legítimo em ter um site funcional e seguro, art. 6.º, n.º 1, al. f) | [CONFIRMAR: prazo de registos do alojamento] |
-| Medir visitas e melhorar o site | Página visitada, origem, país, dispositivo e navegador (agregados, sem cookies) | Interesse legítimo em perceber como o site é usado, art. 6.º, n.º 1, al. f) | [CONFIRMAR: prazo de retenção do Vercel Web Analytics] |
-| Publicar fotografias de resultados e comentários de clientes | Imagem e nome de perfil | [CONFIRMAR: consentimento de cada cliente retratada ou citada] | Até ao pedido de remoção |
+| Entregar o site e mantê-lo seguro | Endereço IP e dados técnicos de acesso | Interesse legítimo em ter um site funcional e seguro, art. 6.º, n.º 1, al. f) | Segundo a política do alojamento (Vercel) |
+| Medir visitas e melhorar o site | Página visitada, origem, país, dispositivo e navegador (agregados, sem cookies) | Interesse legítimo em perceber como o site é usado, art. 6.º, n.º 1, al. f) | Segundo a política do Vercel Web Analytics |
+| Publicar fotografias de resultados e comentários de clientes | Imagem e nome de perfil | Consentimento de cada cliente retratada ou citada, art. 6.º, n.º 1, al. a) | Até ao pedido de remoção |
 
 Se aparece numa fotografia ou num comentário publicado neste site e quer que seja retirado, basta pedir pelos contactos da secção 1. Removemos sem necessidade de justificação.
 
@@ -66,7 +65,7 @@ Consulte as políticas de cada serviço: [Vercel](https://vercel.com/legal/priva
 
 ### Transferências para fora da União Europeia
 
-A Vercel e a Meta podem tratar dados nos Estados Unidos. Essas transferências assentam no Quadro de Privacidade de Dados UE-EUA ou em cláusulas contratuais-tipo aprovadas pela Comissão Europeia. [CONFIRMAR: mecanismo indicado no contrato com a Vercel]
+A Vercel e a Meta podem tratar dados nos Estados Unidos. Essas transferências assentam no Quadro de Privacidade de Dados UE-EUA ou em cláusulas contratuais-tipo aprovadas pela Comissão Europeia.
 
 ## 5. Cookies
 
@@ -74,7 +73,7 @@ Este site não guarda cookies, mesmo com as estatísticas de visitas, e não car
 
 ## 6. Como protegemos os seus dados
 
-O site é servido através de ligação cifrada. As conversas ficam na aplicação WhatsApp e só o Geremias lhes acede. [CONFIRMAR: quem tem acesso ao telemóvel e às conversas] Se ocorrer um incidente que ponha os seus dados em risco, avisamos as pessoas afetadas e a CNPD nos prazos previstos na lei.
+O site é servido através de ligação cifrada. As conversas ficam na aplicação WhatsApp e só o Geremias lhes acede. Se ocorrer um incidente que ponha os seus dados em risco, avisamos as pessoas afetadas e a CNPD nos prazos previstos na lei.
 
 ## 7. Os seus direitos
 
@@ -87,7 +86,7 @@ Pode, a qualquer momento:
 - receber os seus dados num formato que possa levar para outro prestador;
 - retirar um consentimento que tenha dado, sem afetar o que foi feito até aí.
 
-Para exercer estes direitos, escreva para [E-MAIL] ou envie mensagem para o +351 937 751 253. Respondemos no prazo máximo de um mês. O exercício dos direitos é gratuito.
+Para exercer estes direitos, escreva para contato@klinsmannof.com ou envie mensagem para o +351 937 751 253. Respondemos no prazo máximo de um mês. O exercício dos direitos é gratuito.
 
 Se entender que os seus dados não foram tratados corretamente, pode apresentar reclamação à Comissão Nacional de Proteção de Dados (CNPD), em [www.cnpd.pt](https://www.cnpd.pt).
 
