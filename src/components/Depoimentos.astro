@@ -1,0 +1,56 @@
+---
+// Depoimentos reais, verbatim — comentários do Instagram (Análise de
+// Instagram.md) + stories reais relidos e revalidados em
+// Identidade Visual/Prints/Storys - Feedback/. Ver correção em
+// site-brief.json > Depoimentos (item "As mãos de fada" removido por não ter
+// fonte confirmada; substituído pela citação real de @laracastro023).
+// Curadoria Impeccable 2026-09-09: reduzido de 9 para 5 (critique P2 — carga
+// cognitiva), mantendo as citações mais substantivas; as descartadas eram
+// verbatim reais mas curtas/pouco distintivas ("prontinha 🫶", "To amando 🥰" etc).
+// Redesenho Impeccable 2026-09-10: tentativa de fita horizontal em loop foi
+// revertida a pedido do cliente — depoimentos precisam aparecer no fluxo
+// normal da página, revelados ao descer o scroll, nunca atrás de uma
+// interação horizontal separada. Ficou a leve inclinação alternada + reveal
+// escalonado por card como o toque dinâmico, sem tirar o visitante do scroll
+// vertical natural.
+const depoimentos = [
+  { texto: "Eu ameiiiiii, muito obrigada!! Ficou perfeito 😍❤️", autor: "@betinhadiniz", origem: "comentário no Instagram", rot: "-rotate-1" },
+  { texto: "adoroooo. É o meu hair stylist preferido ❤️", autor: "Margarida Silva", origem: "print de conversa real", rot: "rotate-1" },
+  { texto: "No one does it better than Hair Wizard @gkiimhair ✨", autor: "@sady_s", origem: "story", rot: "-rotate-1" },
+  { texto: "Fico encantada com cada resultado", autor: "@larissaaylla_2", origem: "comentário no Instagram", rot: "rotate-1" },
+  { texto: "O cabelo de sonho é meu 😮‍💨", autor: "@nenedasilvamarques", origem: "comentário no Instagram", rot: "-rotate-1" },
+];
+---
+
+<section id="depoimentos" class="bg-[color:var(--color-fundo)]/40 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5">
+    <div data-reveal class="mx-auto max-w-2xl text-center">
+      <div class="divider-gold mb-5"><span></span></div>
+      <h2 class="text-balance font-display text-3xl text-[color:var(--color-texto)] sm:text-4xl md:text-5xl">Quem já viveu a transformação</h2>
+      <p class="mt-4 text-[color:var(--color-texto)]/70">Comentários e feedbacks reais, deixados por clientes no Instagram.</p>
+    </div>
+
+    <div class="mt-14 columns-1 gap-6 sm:columns-2 lg:columns-3">
+      {depoimentos.map((d, i) => (
+        <figure
+          data-reveal
+          style={`--reveal-delay: ${(i % 3) * 90}ms`}
+          class={`hover-lift mb-6 break-inside-avoid rounded-2xl border border-black/5 bg-white p-6 pt-11 shadow-[0_10px_30px_-18px_rgba(26,26,26,0.35)] ${d.rot}`}
+        >
+          <span class="mb-1 block font-display text-5xl leading-none text-[color:var(--color-primaria)]/25" aria-hidden="true">&ldquo;</span>
+          <blockquote class="relative font-display text-xl text-[color:var(--color-texto)] sm:text-2xl">
+            {d.texto}
+          </blockquote>
+          <!-- Bloco de autoria em duas linhas (nome em destaque, origem abaixo) —
+               hierarquia adaptada do "Editorial Testimonial" do 21st.dev. O
+               carrossel desse componente não foi adotado: o cliente já pediu
+               os depoimentos todos visíveis no scroll (ver comentário acima). -->
+          <figcaption class="mt-5 border-t border-black/10 pt-4">
+            <span class="block text-sm font-medium text-[color:var(--color-texto)]">{d.autor}</span>
+            <span class="mt-0.5 block text-xs text-[color:var(--color-texto)]/65">{d.origem}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

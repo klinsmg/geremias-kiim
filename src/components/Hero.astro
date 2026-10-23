@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import retrato from "../assets/prints/hero-geremias.jpg";
+import { whatsappLink } from "../data/contact";
+
+const whatsapp = whatsappLink("Olá Geremias, gostaria de pedir um orçamento ✨");
+---
+
+<section id="top" class="foco-claro relative overflow-hidden bg-[#1a1a1a]">
+  <!-- Hero ocupa a primeira tela (100svh menos o header fixo de 77px) e a
+       foto aparece sempre inteira, sem corte (object-contain; proporção 3:4).
+       - Tela larga (variante hero-wide, ver global.css): a coluna da foto tem
+         exatamente a largura da foto na altura do hero, texto ao lado.
+       - Tela alta (telemóvel, tablet em pé): foto em cima, texto embaixo.
+       Onde a área não bate com 3:4, uma cópia desfocada da própria foto
+       preenche as sobras, sem barras pretas. min-h (não h) para nunca cortar
+       conteúdo em telas baixas. -->
+  <div class="relative flex min-h-[calc(100svh-77px)] flex-col hero-wide:grid hero-wide:grid-cols-[min(calc((100svh-77px)*0.75),55vw)_1fr]">
+    <div data-reveal class="pincelada relative min-h-[52svh] w-full flex-1 overflow-hidden hero-wide:min-h-0">
+      <Image
+        src={retrato}
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl brightness-75"
+        width={64}
+        loading="eager"
+      />
+      <!-- Imagem LCP: eager + fetchpriority="high", nunca lazy -->
+      <Image
+        src={retrato}
+        alt="Retrato de estúdio de Geremias Kiim, cabeleireiro e colorista em Lisboa"
+        class="absolute inset-0 h-full w-full object-contain"
+        widths={[480, 768, 1024, 1448, 1932, 2400]}
+        sizes="(min-aspect-ratio: 5/4) 55vw, 100vw"
+        quality={78}
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#1a1a1a] to-transparent hero-wide:hidden"></div>
+    </div>
+
+    <div class="@container relative z-10 flex flex-col justify-center gap-5 bg-[#1a1a1a] px-5 py-7 sm:gap-6 sm:px-8 sm:py-12 hero-wide:px-14 hero-wide:py-10">
+      <!-- Sem kicker acima do H1 — ver craft-floor.md do Impeccable ("eyebrow
+           above a heading" é ban, não default). "Lisboa" já está no parágrafo
+           abaixo ("Santos, Lisboa"), sem perda de informação. -->
+      <!-- Título fluido pela largura da coluna (cqw): "Especialista em" mede
+           ~6.94em, então 13.4cqw mantém as 2 linhas no maior tamanho que cabe,
+           do telemóvel ao ecrã largo (teto de 6rem). -->
+      <h1 class="font-display text-[clamp(2.25rem,13.4cqw,6rem)] leading-[0.95] text-white">
+        Especialista em
+        <span data-reveal style="--reveal-delay: 350ms" class="pincelada relative block text-[color:var(--color-primaria)]">loiros naturais</span>
+      </h1>
+
+      <p class="max-w-md text-base text-white/70 sm:text-lg">
+        Realce sua beleza com técnica e cuidado — atendimento boutique no Solo Concept Beauty Coworking, Santos, Lisboa.
+      </p>
+
+
+      <div class="mt-2 flex flex-wrap gap-4">
+        <a
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover-lift inline-flex min-h-11 items-center rounded-full bg-[color:var(--color-destaque)] px-7 py-3.5 text-sm font-medium text-white shadow-sm"
+        >
+          Peça seu orçamento no WhatsApp
+        </a>
+        <a
+          href="#galeria"
+          class="hover-lift inline-flex min-h-11 items-center rounded-full border border-white/25 px-7 py-3.5 text-sm font-medium text-white"
+        >
+          Ver o trabalho
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

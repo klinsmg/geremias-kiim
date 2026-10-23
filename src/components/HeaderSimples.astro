@@ -1,0 +1,32 @@
+---
+// Header das páginas secundárias (termos, privacidade, cookies, 404): o
+// Header principal usa âncoras da home (#essencia etc.), que não existem aqui.
+import { whatsappLink } from "../data/contact";
+
+const whatsapp = whatsappLink("Olá Geremias, gostaria de pedir um orçamento ✨");
+---
+
+<header class="border-b border-black/5 bg-[#fdfcfb]">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/" class="flex items-center gap-3 leading-tight">
+      <span
+        aria-hidden="true"
+        class="glifo-assinatura flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[color:var(--color-primaria)]/40 text-lg text-[color:var(--color-primaria)]"
+      >
+        ✳
+      </span>
+      <span class="block font-display text-xl font-semibold text-[color:var(--color-texto)]">Geremias Kiim</span>
+    </a>
+    <nav class="flex items-center gap-2 text-sm sm:gap-6">
+      <a href="/" class="nav-link hidden text-[color:var(--color-texto)]/80 hover:text-[color:var(--color-primaria-texto)] sm:inline">Início</a>
+      <a
+        href={whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex min-h-11 items-center rounded-full bg-[color:var(--color-destaque)] px-5 text-sm font-medium text-white transition hover:opacity-90"
+      >
+        WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import tesoura from "../assets/prints/sobre-geremias-tesoura.jpg";
+
+// Formação real em Londres, confirmada quadro a quadro no vídeo fonte
+// (Identidade Visual/Prints/Sobre Jeremias Kiim/Formação em Toni&Guy.mp4):
+// diploma "DIPLOMA AWARD — Creative Cut & Colour — TONI&GUY EDUCATION",
+// datado "10TH – 11TH MARCH 2025", segurado por ele em frente ao mural de
+// fotos da loja histórica da marca em Londres — ver Essência.
+const notas = [
+  { texto: "10 e 11 de março de 2025, na loja histórica da TONI&GUY em Londres", rot: "-rotate-1" },
+  { texto: "Prática real de corte e coloração, lado a lado com educadores da marca", rot: "rotate-1" },
+];
+---
+
+<section id="essencia" class="mx-auto max-w-6xl px-5 py-20 md:py-28">
+  <div class="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
+    <div data-reveal class="lg:sticky lg:top-28">
+      <!-- Sem eyebrow/kicker acima do heading — ver craft-floor.md do Impeccable
+           ("no brief earns it back"); o divisor ornamental substitui o rótulo
+           de texto, o heading carrega o próprio peso. -->
+      <div class="divider-gold mb-6 justify-start"><span></span></div>
+      <h2 class="text-balance font-display text-3xl text-[color:var(--color-texto)] sm:text-4xl md:text-5xl">
+        Cor, técnica e cuidado em cada fio
+      </h2>
+      <p class="drop-cap mt-6 text-[color:var(--color-texto)]/75">
+        Sou o Geremias, cabeleireiro e colorista independente, especialista em balayage, loiros e morenas
+        iluminadas. Atendo no <strong class="font-medium text-[color:var(--color-texto)]">Solo Concept
+        &bull; Beauty Coworking</strong>, no bairro de Santos, em Lisboa — um espaço boutique pensado para
+        um atendimento próximo, técnico e sem pressa, sempre em busca de resultados naturais e duradouros.
+      </p>
+      <p class="mt-8 font-display text-lg text-[color:var(--color-primaria-texto)] italic">— Geremias Kiim</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div data-reveal class="col-span-full grid grid-cols-1 items-start gap-4 sm:grid-cols-5">
+        <div class="sm:col-span-3 overflow-hidden rounded-2xl shadow-[0_10px_30px_-18px_rgba(26,26,26,0.35)]">
+          <Image
+            src={tesoura}
+            alt="Geremias Kiim segurando uma tesoura de corte, retrato de estúdio"
+            class="aspect-[4/5] w-full object-cover"
+            widths={[240, 360, 480]}
+            sizes="(min-width: 1024px) 20rem, 55vw"
+          />
+        </div>
+        <div class="sm:col-span-2 sm:mt-8 overflow-hidden rounded-2xl shadow-[0_10px_30px_-18px_rgba(26,26,26,0.35)]">
+          <video
+            class="aspect-[3/4] w-full object-cover"
+            src="/video/formacao-toniguy-londres.mp4"
+            poster="/video/formacao-toniguy-poster.jpg"
+            aria-label="Geremias Kiim com o Diploma Award da TONI&GUY Education, em frente à loja histórica da marca em Londres"
+            data-motion-safe
+            autoplay
+            muted
+            loop
+            playsinline
+            disablepictureinpicture
+            preload="auto"
+            oncontextmenu="return false"
+          ></video>
+        </div>
+      </div>
+
+      <!-- Diploma em destaque, largura cheia — substitui o antigo card de signo
+           (gosto pessoal) por credencial profissional real; span completo evita
+           card órfão na grade 2 colunas com os 2 notas abaixo (1 + 2 = linhas
+           completas, ver auditoria Impeccable 2026-09-09 sobre esse mesmo bug). -->
+      <div
+        data-reveal
+        style="--reveal-delay: 60ms"
+        class="nota-pessoal col-span-full flex items-center gap-4 rounded-xl p-5 -rotate-1"
+      >
+        <span class="font-display text-4xl text-[color:var(--color-primaria)]">2025</span>
+        <div>
+          <p class="text-xs font-medium tracking-widest text-[color:var(--color-texto)]/70 uppercase">Diploma Award</p>
+          <p class="font-display text-lg text-[color:var(--color-texto)]">Creative Cut &amp; Colour — TONI&amp;GUY Education</p>
+        </div>
+      </div>
+
+      {notas.map((nota, i) => (
+        <div
+          data-reveal
+          style={`--reveal-delay: ${(i + 1) * 70}ms`}
+          class={`nota-pessoal flex items-center rounded-xl p-5 text-sm text-[color:var(--color-texto)]/80 ${nota.rot}`}
+        >
+          {nota.texto}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+{
+  "name": "geremias-kiim-hair",
+  "description": "Site da Geremias Kiim Hair — atelier de cor especializado em loiros naturais, Lisboa.",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@alpinejs/focus": "^3.17.2",
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "alpinejs": "^3.17.2",
+    "astro": "^7.3.2",
+    "tailwindcss": "^4.3.3"
+  },
+  "allowScripts": {
+    "esbuild": true
+  },
+  "devDependencies": {
+    "@types/alpinejs": "^3.13.11"
+  }
+}

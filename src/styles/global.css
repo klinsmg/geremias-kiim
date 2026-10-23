@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+/* Fontes auto-hospedadas — ver site-forge/research/identity.json (fontes.origem_do_dado) */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tema — cores/fontes vindas de site-forge/research/identity.json e site-brief.json */
+@theme {
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primaria: #c9975c; /* loiro dourado/caramelo — só decoração/preenchimento, nunca texto sobre fundo claro */
+  --color-primaria-texto: #8a6335; /* mesma família, escurecido pra passar 4.5:1 sobre #fdfcfb — ver auditoria Impeccable 2026-09-09 */
+  --color-destaque: #5b2333; /* vermelho vinho / dark cherry */
+  --color-fundo: #d8d6d2; /* bege neutro do salão */
+  --color-texto: #1a1a1a; /* preto quase puro */
+}
+
+/* Hero: tela mais larga que alta o bastante para foto 3:4 em altura cheia +
+   coluna de texto lado a lado (ver Hero.astro) */
+@custom-variant hero-wide (@media (min-aspect-ratio: 5/4));
+
+/* Movimento reduzido: a pedido do cliente (2026-10-13) as animações rodam
+   sempre no desktop, mesmo com "reduzir movimento" ligado no sistema. A
+   preferência só é respeitada em dispositivos de toque (hover: none). */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) and (hover: none) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Evita que o header fixo esconda o topo da seção ao navegar por âncora */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Link "Pular para o conteúdo" — visível só ao ganhar foco por teclado */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 100;
+  border-radius: 9999px;
+  background: var(--color-destaque);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  transition: top 0.2s ease;
+}
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+/* Foco de teclado visível e consistente em toda a página — Web Interface
+   Guidelines: nunca remover outline sem substituir por algo igualmente
+   visível. Aplicado a links e botões interativos. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-destaque);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+/* Sobre fundo escuro/vinho (hero, CTA final, rodapé) o anel vinho some — usa branco */
+.foco-claro a:focus-visible,
+.foco-claro button:focus-visible {
+  outline-color: #fff;
+}
+
+::selection {
+  background: var(--color-primaria);
+  color: var(--color-texto);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-texto);
+  background-color: #fdfcfb;
+  background-image: radial-gradient(circle at 50% -10%, rgba(201, 151, 92, 0.08), transparent 60%);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Divisor ornamental — linha fina + losango dourado */
+.divider-gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.divider-gold::before,
+.divider-gold::after {
+  content: "";
+  height: 1px;
+  width: 2.5rem;
+  background: rgba(201, 151, 92, 0.45);
+}
+.divider-gold span {
+  display: block;
+  height: 6px;
+  width: 6px;
+  rotate: 45deg;
+  background: var(--color-primaria);
+}
+
+/* Link de navegação com sublinhado animado */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -3px;
+  height: 1px;
+  background: var(--color-primaria);
+  transition: right 0.3s ease;
+}
+.nav-link:hover::after {
+  right: 0;
+}
+
+/* Scroll reveal com stagger — ver site-forge/brief/site-brief.json > motion
+   (motion.csv "Scroll Reveal, Standard": 400-600ms, power2.out, stagger ~80ms) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) and (hover: none) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    transition-delay: 0ms;
+  }
+}
+
+/* Hover micro-interação padrão — motion.csv "Hover Micro-interaction, Standard"
+   (y:-4, scale leve, 200-300ms) — aplicado seletivamente só a elementos tocáveis
+   (cards de depoimento, itens de galeria), nunca a blocos estruturais/fotografia. */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+@media (prefers-reduced-motion: reduce) and (hover: none) {
+  .hover-lift:hover {
+    transform: none;
+  }
+}
+
+/* Glifo assinatura — motivo pessoal recorrente (header, Essência, CTA final)
+   no lugar de um logo que o cliente não tem, ver site-brief.json > Header/Nav */
+.glifo-assinatura {
+  font-family: var(--font-display);
+  font-style: normal;
+  line-height: 1;
+}
+
+/* Nota tipográfica — mosaico de fatos pessoais na seção Essência, estilo
+   post-it/polaroid anotado, reforçando "atenção aos detalhes" na composição */
+.nota-pessoal {
+  border: 1px dashed rgba(201, 151, 92, 0.55);
+  background: #fffdfa;
+  box-shadow: 0 10px 24px -18px rgba(26, 26, 26, 0.35);
+}
+
+/* Legenda da Galeria — visível sempre em dispositivos sem hover (touch);
+   em desktop, permanece hover-reveal (ver Galeria.astro) */
+@media (hover: none) {
+  .galeria-legenda {
+    opacity: 1 !important;
+  }
+}
+
+/* Lightbox da Galeria — <dialog> nativo; trava o scroll da página enquanto
+   aberto e entra com um fade curto */
+html:has(.galeria-lightbox[open]) {
+  overflow: hidden;
+}
+@media (prefers-reduced-motion: no-preference), (hover: hover) {
+  .galeria-lightbox[open],
+  .galeria-lightbox[open]::backdrop {
+    animation: lightbox-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Pincelada — cortina diagonal que varre e revela a foto/palavra, ecoando o
+   gesto de pintar uma mecha à mão (a técnica de balayage do próprio Geremias).
+   É o único momento de entrada autoral do site: retrato do Hero, a palavra
+   "loiros naturais" e as 3 fotos do Cardápio de tons — nunca o reveal padrão
+   de scroll (opacity/translateY) das demais seções, que fica suprimido aqui. */
+.pincelada {
+  overflow: hidden;
+}
+.pincelada::after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  right: -20%;
+  bottom: -25%;
+  left: -20%;
+  background: linear-gradient(100deg, var(--color-texto) 0%, var(--color-destaque) 45%, var(--color-primaria) 100%);
+  transform: scaleX(1) skewX(-10deg);
+  transform-origin: right center;
+  transition: transform 1.15s cubic-bezier(0.65, 0, 0.35, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  pointer-events: none;
+}
+[data-reveal].pincelada {
+  opacity: 1;
+  transform: none;
+}
+.pincelada.is-visible::after {
+  transform: scaleX(0) skewX(-10deg);
+}
+@media (prefers-reduced-motion: reduce) and (hover: none) {
+  .pincelada::after {
+    transition: none;
+    transform: scaleX(0) skewX(-10deg);
+  }
+}
+
+/* Drop cap editorial — abertura de parágrafo da seção Essência */
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 3.75rem;
+  line-height: 0.85;
+  padding-right: 0.35rem;
+  padding-top: 0.15rem;
+  color: var(--color-primaria);
+}

@@ -1,0 +1,53 @@
+---
+import { whatsappLink } from "../data/contact";
+
+// Substitui a antiga grade de cards "Serviços" por um índice editorial —
+// ver site-brief.json > "A técnica". Mesma lista real de serviços, sem preços.
+const servicos = [
+  "Coloração em loiros naturais",
+  "Balayage (liso e cacheado)",
+  "Correção de cor",
+  "Morena iluminada",
+  "Corte",
+  "Tratamento capilar",
+];
+
+const whatsapp = whatsappLink("Olá Geremias, quero saber mais sobre os serviços e pedir um orçamento");
+---
+
+<section id="tecnica" class="bg-[color:var(--color-fundo)]/40 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5">
+    <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-16">
+      <div data-reveal>
+        <div class="divider-gold mb-6 justify-start"><span></span></div>
+        <h2 class="text-balance font-display text-3xl text-[color:var(--color-texto)] sm:text-4xl md:text-5xl">O que eu faço</h2>
+        <p class="mt-6 text-[color:var(--color-texto)]/70">
+          Cada fio reage à luz de um jeito diferente — por isso a técnica vem sempre antes da fórmula.
+          Sem tabela de preços fixa por aqui: cada cabelo é único, então o orçamento é sempre
+          personalizado no WhatsApp.
+        </p>
+        <a
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover-lift mt-8 inline-flex min-h-11 items-center rounded-full bg-[color:var(--color-destaque)] px-7 py-3.5 text-sm font-medium text-white"
+        >
+          Peça seu orçamento no WhatsApp
+        </a>
+      </div>
+
+      <ol class="divide-y divide-black/10 border-t border-b border-black/10">
+        {servicos.map((servico, i) => (
+          <li
+            data-reveal
+            style={`--reveal-delay: ${i * 60}ms`}
+            class="flex items-center gap-4 py-5"
+          >
+            <span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rotate-45 bg-[color:var(--color-primaria)]"></span>
+            <span class="font-display text-xl text-[color:var(--color-texto)] sm:text-2xl">{servico}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>

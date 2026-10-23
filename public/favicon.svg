@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Glifo assinatura (asterisco de 8 pontas) em caramelo sobre preto-retrato -->
+  <rect width="64" height="64" rx="14" fill="#1a1a1a"/>
+  <g stroke="#c9975c" stroke-width="5" stroke-linecap="round">
+    <path d="M32 13v38M13 32h38M18.6 18.6l26.8 26.8M45.4 18.6 18.6 45.4"/>
+  </g>
+</svg>

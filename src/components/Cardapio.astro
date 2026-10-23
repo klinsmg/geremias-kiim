@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import darkCherry from "../assets/prints/dark-cherry.jpg";
+import goldenBalayage from "../assets/prints/golden-balayage.jpg";
+import begeDourado from "../assets/prints/bege-dourado.jpg";
+import { whatsappLink } from "../data/contact";
+
+const tons = [
+  {
+    nome: "Dark Cherry Hair",
+    img: darkCherry,
+    descricao: "Vermelho cereja profundo, com nuances escuras e vibrantes que revelam diferentes reflexos conforme a luz.",
+  },
+  {
+    nome: "Golden Balayage",
+    img: goldenBalayage,
+    descricao: "Dourado, quente e cheio de luminosidade, com dimensão e movimento que transformam o cabelo.",
+  },
+  {
+    nome: "Bege Dourado Iluminado",
+    img: begeDourado,
+    descricao: "Leve, sofisticado e naturalmente elegante — o loiro perfeito para iluminar sem perder a naturalidade.",
+  },
+];
+---
+
+<section id="cardapio" class="py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5">
+    <div data-reveal class="max-w-2xl">
+      <div class="divider-gold mb-6 justify-start"><span></span></div>
+      <h2 class="text-balance font-display text-3xl text-[color:var(--color-texto)] sm:text-4xl md:text-5xl">Transformações reais</h2>
+      <p class="mt-4 text-[color:var(--color-texto)]/70">
+        Cada tom tem nome, técnica e história — fotos reais de clientes atendidas no salão.
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-14 flex flex-col gap-16 md:gap-24">
+    {tons.map((tom, i) => {
+      const whatsapp = whatsappLink(`Olá Geremias, vi o tom "${tom.nome}" no site e quero saber mais ✨`);
+      const invertido = i % 2 === 1;
+      return (
+        <div class={`grid items-center gap-0 lg:grid-cols-[1.15fr_1fr]`}>
+          <div data-reveal class={`pincelada relative overflow-hidden ${invertido ? "lg:order-2" : ""}`}>
+            <Image
+              src={tom.img}
+              alt={`Resultado de coloração ${tom.nome}`}
+              class="aspect-[4/5] w-full object-cover lg:aspect-[3/4]"
+              widths={[480, 640, 800, 960, 1280, 1600]}
+              sizes="(min-width: 1024px) 55vw, 100vw"
+              quality={78}
+            />
+          </div>
+          <div data-reveal class={`px-5 py-10 sm:px-10 lg:px-16 ${invertido ? "lg:order-1" : ""}`}>
+            <span aria-hidden="true" class="mb-4 block h-1.5 w-1.5 rotate-45 bg-[color:var(--color-primaria)]"></span>
+            <h3 class="text-balance font-display text-3xl leading-[1.05] text-[color:var(--color-texto)] sm:text-4xl md:text-5xl">{tom.nome}</h3>
+            <p class="mt-5 max-w-md text-[color:var(--color-texto)]/65">{tom.descricao}</p>
+            <a
+              href={whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover-lift mt-7 inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[color:var(--color-destaque)] px-6 py-3 text-sm font-medium text-[color:var(--color-destaque)] transition hover:bg-[color:var(--color-destaque)] hover:text-white"
+            >
+              Quero esse tom →
+            </a>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>

@@ -1,0 +1,107 @@
+---
+// Layout das páginas legais (src/pages/*.md): faixa de título, índice lateral
+// montado a partir dos títulos ## do Markdown e conteúdo à direita.
+import Layout from "./Layout.astro";
+import HeaderSimples from "../components/HeaderSimples.astro";
+import Footer from "../components/Footer.astro";
+
+const { frontmatter, headings } = Astro.props;
+const indice = headings.filter((h: { depth: number }) => h.depth === 2);
+---
+
+<Layout title={`${frontmatter.title} | Geremias Kiim`} description={frontmatter.description}>
+  <HeaderSimples />
+  <main id="main">
+    <div class="foco-claro bg-[#1a1a1a] text-white">
+      <div class="mx-auto max-w-6xl px-5 py-14 md:py-20">
+        <h1 class="text-balance font-display text-4xl sm:text-5xl">{frontmatter.title}</h1>
+        <p class="mt-4 max-w-2xl text-white/70">
+          Por favor, leia este documento com atenção. Versão {frontmatter.versao}, em vigor desde {frontmatter.data}.
+        </p>
+      </div>
+    </div>
+
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 lg:grid-cols-[16rem_1fr] lg:gap-16 md:py-20">
+      <nav aria-label="Índice" class="lg:sticky lg:top-8 lg:self-start">
+        <p class="font-display text-lg text-[color:var(--color-texto)]">Índice</p>
+        <ol class="mt-3 space-y-1 border-l border-black/10 text-sm">
+          {indice.map((h: { slug: string; text: string }) => (
+            <li>
+              <a href={`#${h.slug}`} class="-ml-px block border-l border-transparent py-1.5 pl-4 text-[color:var(--color-texto)]/70 hover:border-[color:var(--color-primaria)] hover:text-[color:var(--color-texto)]">
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <article class="legal min-w-0 max-w-[70ch]">
+        <slot />
+      </article>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .legal :global(h2) {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    scroll-margin-top: 2rem;
+  }
+  .legal :global(h2:first-child) {
+    margin-top: 0;
+  }
+  .legal :global(h3) {
+    margin-top: 1.75rem;
+    font-size: 1.125rem;
+  }
+  .legal :global(p),
+  .legal :global(ul),
+  .legal :global(ol),
+  .legal :global(table) {
+    margin-top: 1rem;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--color-texto) 80%, transparent);
+  }
+  .legal :global(ul) {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+  .legal :global(ol) {
+    list-style: decimal;
+    padding-left: 1.25rem;
+  }
+  .legal :global(li + li) {
+    margin-top: 0.35rem;
+  }
+  .legal :global(a) {
+    color: var(--color-destaque);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .legal :global(strong) {
+    font-weight: 600;
+    color: var(--color-texto);
+  }
+  /* Tabelas largas rolam dentro do próprio bloco, nunca a página */
+  .legal :global(table) {
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .legal :global(th),
+  .legal :global(td) {
+    min-width: 9rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem 0.75rem 0;
+    text-align: left;
+    vertical-align: top;
+  }
+  .legal :global(th) {
+    font-weight: 600;
+    color: var(--color-texto);
+  }
+</style>
