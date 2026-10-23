@@ -13,7 +13,6 @@ Este site é propriedade intelectual de **Brendhon Klinsmann Sampaio Lopes**, qu
 Este site é um **projeto de portfólio** de Brendhon Klinsmann Sampaio Lopes. Não é um serviço comercial em operação: não vende nada online e não recolhe pagamentos. Os dados do titular e dos serviços serão completados quando o site passar a uso comercial.
 
 - E-mail do site: contato@klinsmannof.com
-- Telefone e WhatsApp: +351 937 751 253
 
 ## 2. Para que serve este site
 
