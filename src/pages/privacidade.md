@@ -2,14 +2,14 @@
 layout: ../layouts/Legal.astro
 title: Política de Privacidade
 description: Como o site de Geremias Kiim (GKiim Hair) trata os seus dados pessoais, nos termos do RGPD.
-versao: "1.0"
-data: 13 de outubro de 2026
+versao: "1.1"
+data: 23 de outubro de 2026
 ---
 
 ## Resumo
 
 - Este site é uma página de apresentação. Não tem formulários, registo de conta, loja nem newsletter.
-- O site não usa ferramentas de análise de visitas nem de publicidade, e não guarda cookies.
+- O site mede as visitas de forma agregada e anónima (Vercel Web Analytics, sem cookies). Não usa publicidade nem guarda cookies.
 - Só recebemos dados seus quando decide falar connosco por WhatsApp ou por telefone.
 - Usamos esses dados para responder, preparar o orçamento e combinar a marcação. Não os vendemos nem os usamos para publicidade.
 - O mapa é uma imagem fixa. O Google Maps só abre, numa nova aba, se clicar nele.
@@ -31,6 +31,8 @@ Não temos Encarregado de Proteção de Dados, porque a lei não o exige para um
 
 **Dados técnicos de acesso.** Quando abre o site, o serviço de alojamento regista automaticamente dados técnicos como o endereço IP, a data e hora do acesso e o tipo de navegador. Servem para entregar as páginas e manter o site seguro. Não os usamos para o identificar.
 
+**Estatísticas de visitas.** Usamos o Vercel Web Analytics para saber quantas pessoas visitam o site e que secções interessam mais. Recolhe de forma agregada a página visitada, a origem da visita, o país, o tipo de dispositivo, o sistema e o navegador. Não usa cookies, não grava informação no seu dispositivo e não cria perfis nem o segue entre sites. Não ligamos estes dados a si.
+
 **Dados que não recolhemos.** O site não pede nome, e-mail, morada nem dados de pagamento, e não cria perfis de visitantes.
 
 Pedimos que não nos envie dados de saúde além do estritamente necessário para o serviço, por exemplo uma alergia a produtos de coloração. Se o fizer, usamos essa informação apenas para o atender em segurança.
@@ -43,6 +45,7 @@ Pedimos que não nos envie dados de saúde além do estritamente necessário par
 | Marcar e prestar o serviço | Telefone, nome, mensagens | Execução do contrato, art. 6.º, n.º 1, al. b) | Enquanto durar a relação de cliente e [CONFIRMAR: prazo] depois |
 | Faturação e obrigações fiscais | Nome, NIF e dados da fatura, quando emitida | Obrigação legal, art. 6.º, n.º 1, al. c) | 10 anos, prazo de conservação fiscal em Portugal |
 | Entregar o site e mantê-lo seguro | Endereço IP e dados técnicos de acesso | Interesse legítimo em ter um site funcional e seguro, art. 6.º, n.º 1, al. f) | [CONFIRMAR: prazo de registos do alojamento] |
+| Medir visitas e melhorar o site | Página visitada, origem, país, dispositivo e navegador (agregados, sem cookies) | Interesse legítimo em perceber como o site é usado, art. 6.º, n.º 1, al. f) | [CONFIRMAR: prazo de retenção do Vercel Web Analytics] |
 | Publicar fotografias de resultados e comentários de clientes | Imagem e nome de perfil | [CONFIRMAR: consentimento de cada cliente retratada ou citada] | Até ao pedido de remoção |
 
 Se aparece numa fotografia ou num comentário publicado neste site e quer que seja retirado, basta pedir pelos contactos da secção 1. Removemos sem necessidade de justificação.
@@ -53,7 +56,7 @@ Não vendemos dados e não os cedemos para publicidade. Os dados passam apenas p
 
 | Entidade | Para quê | Papel |
 | --- | --- | --- |
-| Vercel Inc. (EUA) | Alojamento do site e registos técnicos de acesso | Subcontratante |
+| Vercel Inc. (EUA) | Alojamento do site, registos técnicos de acesso e estatísticas de visitas (Web Analytics) | Subcontratante |
 | WhatsApp, serviço da Meta Platforms Ireland Ltd. | Canal de conversa, quando decide contactar-nos por aí | Responsável autónomo pelo serviço de mensagens |
 | Contabilista e Autoridade Tributária | Faturação, quando há serviço prestado | Destinatários por obrigação legal |
 
@@ -67,7 +70,7 @@ A Vercel e a Meta podem tratar dados nos Estados Unidos. Essas transferências a
 
 ## 5. Cookies
 
-Este site não guarda cookies nem carrega conteúdos de outros serviços. Os detalhes estão na [Política de Cookies](/cookies).
+Este site não guarda cookies, mesmo com as estatísticas de visitas, e não carrega conteúdos de outros serviços. Os detalhes estão na [Política de Cookies](/cookies).
 
 ## 6. Como protegemos os seus dados
 

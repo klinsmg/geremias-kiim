@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 import { getImage } from "astro:assets";
 import ogImagem from "../assets/prints/hero-geremias.jpg";
 import { phoneNumber, instagramUrl, facebookUrl } from "../data/contact";
@@ -84,6 +85,7 @@ const jsonLd = {
         }
       </style>
     </noscript>
+    <Analytics />
   </head>
   <body class="bg-[#fdfcfb] text-[color:var(--color-texto)] antialiased">
     <a href="#main" class="skip-link">Pular para o conteúdo</a>

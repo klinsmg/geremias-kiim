@@ -2,8 +2,8 @@
 layout: ../layouts/Legal.astro
 title: Política de Cookies
 description: Que cookies o site de Geremias Kiim (GKiim Hair) usa e como os pode controlar.
-versao: "1.0"
-data: 13 de outubro de 2026
+versao: "1.1"
+data: 23 de outubro de 2026
 ---
 
 ## 1. O que são cookies
@@ -12,7 +12,9 @@ Cookies são pequenos ficheiros que um site guarda no seu navegador para se lemb
 
 ## 2. Que cookies este site usa
 
-**Este site não guarda cookies** e não usa armazenamento local. Não tem ferramentas de análise de visitas, píxeis de publicidade, remarketing nem conteúdos incorporados de outros serviços.
+**Este site não guarda cookies** e não usa armazenamento local. Não tem píxeis de publicidade, remarketing nem conteúdos incorporados de outros serviços.
+
+Medimos as visitas com o Vercel Web Analytics, uma ferramenta de estatísticas simples que **não usa cookies**, não grava nada no seu dispositivo e não o segue entre sites nem entre visitas. Conta, de forma agregada, as páginas vistas, a origem da visita, o país e o tipo de dispositivo e de navegador. Detalhes na secção 4 da [Política de Privacidade](/privacidade).
 
 Por isso não mostramos um aviso de cookies ao entrar: não há nada para aceitar ou recusar.
 
@@ -36,7 +38,7 @@ Os seus direitos sobre dados pessoais e a forma de os exercer estão na [Políti
 
 ## 7. Alterações a esta política
 
-Se o site passar a usar cookies, por exemplo uma ferramenta de análise de visitas, atualizamos esta página antes e passamos a pedir o seu consentimento à entrada.
+Se o site passar a usar cookies, por exemplo uma ferramenta de análise que os guarde, atualizamos esta página antes e passamos a pedir o seu consentimento à entrada.
 
 ## 8. Lei aplicável e contacto
 
